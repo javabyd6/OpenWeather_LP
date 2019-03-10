@@ -19,7 +19,7 @@ public class Main {
         ObjectMapper mapper = new ObjectMapper();
 
         WeatherService weatherService = new WeatherService("https://api.apixu.com/v1/current.json", "e2fc5f174f2e4a3fa12115806191003");
-        Weather weather = weatherService.getCity(city);
+        Weather weather = weatherService.getCityWeather(city);
 
         System.out.println("Miasto: "+ city +" "+"-"+" "+ "Temperatura: " + weather.getCurrent().getTemp_c());
 

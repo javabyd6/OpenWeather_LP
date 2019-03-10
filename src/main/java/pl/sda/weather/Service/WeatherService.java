@@ -18,11 +18,11 @@ public class WeatherService {
 
 
     private String urlAddress;
-    private String api;
+    private String kluczApi;
 
 
-    public Weather getCity(String city) throws IOException, IOException {
-        String finalURL = urlAddress + "?key=" + api + "&q=";
+    public Weather getCityWeather(String city) throws IOException, IOException {
+        String finalURL = urlAddress + "?key=" + kluczApi + "&q=";
         ObjectMapper mapper = new ObjectMapper();
         URL url = new URL(finalURL + city);
         Weather weather = mapper.readValue(url, Weather.class);
