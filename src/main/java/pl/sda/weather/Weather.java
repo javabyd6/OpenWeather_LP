@@ -8,4 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Weather {
+
+    private Condition condition;
+    private Current current;
 }
