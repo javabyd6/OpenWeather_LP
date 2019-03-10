@@ -15,9 +15,6 @@ public class Main {
         System.out.println("Podaj nazwę miasta");
         String city = scanner.nextLine();
 
-
-        ObjectMapper mapper = new ObjectMapper();
-
         WeatherService weatherService = new WeatherService("https://api.apixu.com/v1/current.json", "e2fc5f174f2e4a3fa12115806191003");
         Weather weather = weatherService.getCityWeather(city);
 
